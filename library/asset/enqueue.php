@@ -43,11 +43,15 @@ class enqueue {
 
 	}
 
+	/**
+	 * 
+	 * @since 0.0.1
+	*/
 	public function style(){
 
 	?>
 	<style>
-		
+
 	</style>
 	<?php
 

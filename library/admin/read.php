@@ -40,10 +40,18 @@ class read {
 
 	/**
 	 * Read stored option value
+	 * 
+	 * @since   0.0.1
 	*/
 	public static function option(){
 
-		return \get_option( \q_stand_with_ukraine()::get( 'option' ) );
+		$_option = \get_option( \q_stand_with_ukraine()::get( 'option' ) );
+
+		return [
+			'{message}' => \__( 'We stand with Ukraine' ),
+			'{button_donate}' => \__( 'Donate' ),
+			'{button_install}' => \__( 'Install' ),
+		];
 
 	}
 

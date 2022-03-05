@@ -38,9 +38,16 @@ class api {
 
 	}
 
+	/**
+	 * 
+	 * @since 0.0.1
+	*/
 	public function get_source_links(){}
 
-
+	/**
+	 * 
+	 * @since 0.0.1
+	*/
 	public function get_dontation_links(){}
 
 }

@@ -40,6 +40,8 @@ class update {
 
 	/**
 	 * Update stored option value
+	 * 
+	 * @since   0.0.1
 	*/
 	public static function option( array $array = [] ){
 
