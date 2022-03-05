@@ -101,7 +101,7 @@ final class plugin {
         }
         
         // return if isset ##
-        return self::$key ?? false ;
+        return self::$$key ?? false ;
 
     }
 
@@ -128,7 +128,7 @@ final class plugin {
         // __log( 'prop->set: '.$key.' -> '.$value );
 
         // set new value ##
-		return self::$key = $value;
+		return self::$$key = $value;
 
     }
 

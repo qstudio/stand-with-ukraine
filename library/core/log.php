@@ -113,7 +113,7 @@ class log {
 	*/
 	public static function set_to( $key = null, $value = null ){
 
-		q::$_log[$key] = $value;
+		\q_stand_with_ukraine()::get( 'log' )[$key] = $value;
 
 	}
 
@@ -218,7 +218,7 @@ class log {
 	 */
 	private static function push( $key = null, $value = null, $new_key = '' ){
 
-		$log = q::$_log;
+		$log = \q_stand_with_ukraine()::get( 'log' );
 
 		if ( 
 			is_string( $key )
@@ -256,7 +256,7 @@ class log {
 
 			$log[$key][$new_key][] = $value;
 
-			return q::$_log = $log;
+			return \q_stand_with_ukraine()::set( 'log', $log );
 
 		}
 
@@ -268,19 +268,19 @@ class log {
 			if (
 				isset( $key[2] )
 			){
-				if ( ! isset( q::$_log[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ][ self::key_replace($key[2]) ] ) ) {
+				if ( ! isset( \q_stand_with_ukraine()::get( 'log' )[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ][ self::key_replace($key[2]) ] ) ) {
 					
-					q::$_log[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ][ self::key_replace($key[2]) ] = [];
+					\q_stand_with_ukraine()::get( 'log' )[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ][ self::key_replace($key[2]) ] = [];
 				
 				}
 
 				if ( 
-					in_array( $value, q::$_log[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ][ self::key_replace($key[2]) ], true ) 
+					in_array( $value, \q_stand_with_ukraine()::get( 'log' )[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ][ self::key_replace($key[2]) ], true ) 
 				){ 
 					return false;
 				};
 
-				return q::$_log[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ][ self::key_replace($key[2]) ][] = $value;
+				return \q_stand_with_ukraine()::get( 'log' )[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ][ self::key_replace($key[2]) ][] = $value;
 
 			}
 
@@ -288,38 +288,38 @@ class log {
 				isset( $key[1] )
 			){
 
-				if ( ! isset( q::$_log[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ] ) ) {
+				if ( ! isset( \q_stand_with_ukraine()::get( 'log' )[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ] ) ) {
 
-					q::$_log[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ] = [];
+					\q_stand_with_ukraine()::get( 'log' )[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ] = [];
 
 				}
 
 				if ( 
-					in_array( $value, q::$_log[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ], true ) 
+					in_array( $value, \q_stand_with_ukraine()::get( 'log' )[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ], true ) 
 				){ 
 					return false;
 				};
 
-				return q::$_log[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ][] = $value;
+				return \q_stand_with_ukraine()::get( 'log' )[ self::key_replace($key[0]) ][ self::key_replace($key[1]) ][] = $value;
 
 			}
 
 			if (
 				isset( $key[0] )
 			){
-				if ( ! isset( q::$_log[self::key_replace($key[0])] ) ) {
+				if ( ! isset( \q_stand_with_ukraine()::get( 'log' )[self::key_replace($key[0])] ) ) {
 
-					q::$_log[ self::key_replace($key[0]) ] = [];
+					\q_stand_with_ukraine()::get( 'log' )[ self::key_replace($key[0]) ] = [];
 
 				}
 
 				if ( 
-					in_array( $value, q::$_log[ self::key_replace($key[0]) ], true ) 
+					in_array( $value, \q_stand_with_ukraine()::get( 'log' )[ self::key_replace($key[0]) ], true ) 
 				){ 
 					return false;
 				};
 
-				return q::$_log[ self::key_replace($key[0]) ][] = $value;
+				return \q_stand_with_ukraine()::get( 'log' )[ self::key_replace($key[0]) ][] = $value;
 
 			}
 			
@@ -411,7 +411,7 @@ class log {
 
 		if ( 
 			! is_null( $key )
-			&& ! isset( q::$_log[ $key ] ) 
+			&& ! isset( \q_stand_with_ukraine()::get( 'log' )[ $key ] ) 
 		) {
 
 			return false;
@@ -419,7 +419,7 @@ class log {
 		}
 
 		if ( 
-			empty( q::$_log[$key] )
+			empty( \q_stand_with_ukraine()::get( 'log' )[$key] )
 		) {
 
 			return false;
@@ -428,15 +428,15 @@ class log {
 
 		if ( isset( $key ) ) {
 			
-			$return = q::$_log[ $key ];  // key group ##
+			$return = \q_stand_with_ukraine()::get( 'log' )[ $key ];  // key group ##
 
-			unset( q::$_log[ $key ] );
+			unset( \q_stand_with_ukraine()::get( 'log' )[ $key ] );
 
         } else {
 
-			$return = q::$_log ; // all
+			$return = \q_stand_with_ukraine()::get( 'log' ) ; // all
 
-			q::$_log = [];
+			\q_stand_with_ukraine()::set( 'log', [] );
 
 		}
 			
@@ -507,7 +507,7 @@ class log {
 
 		if ( 
 			isset( $args['key'] )
-			&& ! isset( q::$_log[ $args['key'] ] ) 
+			&& ! isset( \q_stand_with_ukraine()::get( 'log' )[ $args['key'] ] ) 
 		) {
 
 			return false;
@@ -516,13 +516,15 @@ class log {
 
         if ( isset( $args['key'] ) ) {
 
-			unset( q::$_log[ $args['key'] ] );
+			$_log = \q_stand_with_ukraine()::get( 'log' );
+			unset($_log[ $args['key'] ]);
+			\q_stand_with_ukraine()::set( 'log', $_log );
 
 			return true;
 
 		}
 
-		unset( q::$_log );
+		\q_stand_with_ukraine()::set( 'log', [] );
 
 		return true;
 
@@ -648,9 +650,9 @@ class log {
 		
 		foreach( ( array )$key as $k => $v ) {
 
-			if ( ! isset( q::$_log[$v] ) ) { continue; }
+			if ( ! isset( \q_stand_with_ukraine()::get( 'log' )[$v] ) ) { continue; }
 
-			$log[$v] = q::$_log[$v];
+			$log[$v] = \q_stand_with_ukraine()::get( 'log' )[$v];
 
 		}
 
@@ -662,15 +664,17 @@ class log {
 
 				if ( is_array( $key ) && array_key_exists( $v, $key ) ) { continue; }
 
-				if ( ! isset( q::$_log[$v] ) ) { continue; }
+				if ( ! isset( \q_stand_with_ukraine()::get( 'log' )[$v] ) ) { continue; }
 
-				$log[$v] = q::$_log[$v];
+				$log[$v] = \q_stand_with_ukraine()::get( 'log' )[$v];
 
 			}
 
 		}
 
-		q::$_log['q'] = $log;
+		$_log = \q_stand_with_ukraine()::get( 'log' );
+		$_log['q'] = $log;
+		\q_stand_with_ukraine()::set( 'log', $_log );
 
 		self::write( 'q' );
 

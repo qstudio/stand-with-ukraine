@@ -4,6 +4,9 @@ declare(strict_types = 1);
 
 namespace q\stand_with_ukraine\admin;
 
+// import ##
+use q\stand_with_ukraine\core\helper as h;
+
 // If this file is called directly, Bulk!
 if ( ! defined( 'ABSPATH' ) ) {
 	return;
@@ -48,6 +51,7 @@ class read {
 	public static function option(){
 
 		$_option = \get_option( \q_stand_with_ukraine()::get( 'option' ) );
+		h::log( $_option );
 
 		return [
 			'{message}' 		=> \__( 'We stand with Ukraine' ),
