@@ -41,6 +41,8 @@ class read {
 	/**
 	 * Read stored option value
 	 * 
+	 * @todo	download links to rotate randomly 
+	 * @todo	download list should be updatedable from remote API and cached for a short time in transients
 	 * @since   0.0.1
 	*/
 	public static function option(){
@@ -48,9 +50,13 @@ class read {
 		$_option = \get_option( \q_stand_with_ukraine()::get( 'option' ) );
 
 		return [
-			'{message}' => \__( 'We stand with Ukraine' ),
-			'{button_donate}' => \__( 'Donate' ),
-			'{button_install}' => \__( 'Install' ),
+			'{message}' 		=> \__( 'We stand with Ukraine' ),
+			'{button_donate}' 	=> \__( 'Donate' ),
+			'{title_donate}' 	=> \__( 'View am accredited list of organisations offering humanitation and non-military assistance to Ukraine' ),
+			'{url_donate}'		=> 'https://www.unicef.org.uk/donate/donate-now-to-protect-children-in-ukraine/',
+			'{button_download}' => \__( 'Download' ),
+			'{title_download}' 	=> \__( 'Download the WordPress plugin to install on your own website' ),
+			'{url_download}'	=> 'https://github.com/qstudio/wordpress-plugin-stand-with-ukraine',
 		];
 
 	}
