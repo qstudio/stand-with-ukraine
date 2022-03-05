@@ -38,4 +38,13 @@ class update {
 
 	}
 
+	/**
+	 * Update stored option value
+	*/
+	public static function option( array $array = [] ){
+
+		return \update_option( \q_stand_with_ukraine()::get( 'option' ), $array );
+
+	}
+
 }

@@ -38,4 +38,13 @@ class read {
 
 	}
 
+	/**
+	 * Read stored option value
+	*/
+	public static function option(){
+
+		return \get_option( \q_stand_with_ukraine()::get( 'option' ) );
+
+	}
+
 }

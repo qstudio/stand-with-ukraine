@@ -38,7 +38,18 @@ class enqueue {
 
 		if ( \is_admin() ){ return; }
 
-		// \add_action( 'wp_head', [ $this, 'javascript' ] );
+		// @todo - add script file ##
+		\add_action( 'wp_head', [ $this, 'style' ] );
+
+	}
+
+	public function style(){
+
+	?>
+	<style>
+		
+	</style>
+	<?php
 
 	}
 

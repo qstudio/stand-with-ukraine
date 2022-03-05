@@ -38,7 +38,13 @@ class render {
 
 		if ( \is_admin() ){ return; }
 
-		// \add_action( 'wp_head', [ $this, 'javascript' ] );
+		\add_action( 'wp_head', [ $this, 'banner' ] );
+
+	}
+
+	public function banner(){
+
+		echo \esc_html( 'Stand with Ukraine Banner' );
 
 	}
 

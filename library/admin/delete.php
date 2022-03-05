@@ -38,4 +38,9 @@ class delete {
 
 	}
 
+	/**
+	 * Delete stored option value
+	*/
+	public static function option(){}
+
 }

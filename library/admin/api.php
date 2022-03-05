@@ -38,4 +38,9 @@ class api {
 
 	}
 
+	public function get_source_links(){}
+
+
+	public function get_dontation_links(){}
+
 }

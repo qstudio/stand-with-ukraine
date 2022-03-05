@@ -38,4 +38,9 @@ class create {
 
 	}
 
+	/**
+	 * Create stored option value
+	*/
+	public static function option(){}
+
 }
