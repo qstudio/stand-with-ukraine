@@ -49,7 +49,7 @@ require_once __DIR__ . '/hooks.php';
 $plugin = plugin::get_instance();
 
 // validate instance ##
-if( ! ( $plugin instanceof q\stand_with_ukraine\plugin ) ) {
+if( ! ( $plugin instanceof \q\stand_with_ukraine\plugin ) ) {
 
 	error_log( 'Error in stand_with_ukraine plugin instance' );
 
@@ -60,6 +60,8 @@ if( ! ( $plugin instanceof q\stand_with_ukraine\plugin ) ) {
 
 // set text domain on init hook ##
 \add_action( 'init', [ $plugin, 'load_plugin_textdomain' ], 1 );
+
+$hooks = new \q\stand_with_ukraine\hooks();
 
 // fire hooks - build factory objects and translations ## 
 \add_action( 'after_setup_theme', function() use( $hooks ){

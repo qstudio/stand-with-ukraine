@@ -10,7 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /*
-* Register and Enqueue assets
+ * Register and Enqueue assets
+ * 
+ * 
+ * blue: #045bbb
+ * yellow: #ffd600
 */
 class enqueue {
 

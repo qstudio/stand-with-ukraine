@@ -17,18 +17,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 */
 final class hooks {
 
-	private $plugin;
-
     /**
      * Class constructor to define object props --> empty
      * 
      * @since   0.0.1
      * @return  void
     */
-    function __construct( \epharmacy\bootstrap\plugin $plugin ) {
+    function __construct() {
 
-        $this->plugin = $plugin; 
-		
 	}
 
 	/**
