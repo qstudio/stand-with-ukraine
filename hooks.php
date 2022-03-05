@@ -31,10 +31,18 @@ final class hooks {
 	 * admin hooks
 	*/
 	public function admin( 
-		\q\stand_with_ukraine\admin\fetch $fetch  
+		\q\stand_with_ukraine\admin\api $api,
+		\q\stand_with_ukraine\admin\create $create,
+		\q\stand_with_ukraine\admin\read $read,
+		\q\stand_with_ukraine\admin\update $update,
+		\q\stand_with_ukraine\admin\delete $delete   
 	):void {
 
-		$fetch->hooks();
+		$api->hooks();
+		$create->hooks();
+		$read->hooks();
+		$update->hooks();
+		$delete->hooks();
 
 	}
 
@@ -46,6 +54,17 @@ final class hooks {
 	):void {
 
 		$asset->hooks();
+
+	}
+
+	/**
+	 * theme/ui hooks
+	*/
+	public function theme( 
+		\q\stand_with_ukraine\theme\render $render  
+	):void {
+
+		$render->hooks();
 
 	}
 

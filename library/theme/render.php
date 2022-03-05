@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace q\stand_with_ukraine\asset;
+namespace q\stand_with_ukraine\theme;
 
 // If this file is called directly, Bulk!
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * blue: #045bbb
  * yellow: #ffd600
 */
-class enqueue {
+class render {
 
     /**
      * Class constructor to define object props --> empty

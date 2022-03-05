@@ -10,11 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Fetch Options to select in admin, such as accredited humanitarion charities to donate to.
+ * create option settings
  * 
  * @since 0.0.1
 */
-class fetch {
+class create {
 
     /**
      * Class constructor to define object props

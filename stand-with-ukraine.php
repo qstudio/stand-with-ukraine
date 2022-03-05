@@ -68,12 +68,21 @@ $hooks = new \q\stand_with_ukraine\hooks();
 
 	// admin hooks ##
 	$hooks->admin( 
-		new \q\stand_with_ukraine\admin\fetch()  
+		new \q\stand_with_ukraine\admin\api,
+		new \q\stand_with_ukraine\admin\create,
+		new \q\stand_with_ukraine\admin\read,
+		new \q\stand_with_ukraine\admin\update,
+		new \q\stand_with_ukraine\admin\delete    
 	);
 
 	// asset hooks ##
 	$hooks->asset( 
 		new \q\stand_with_ukraine\asset\enqueue()  
+	);
+
+	// theme hooks ##
+	$hooks->theme( 
+		new \q\stand_with_ukraine\theme\render()  
 	);
 
 }, 3 );

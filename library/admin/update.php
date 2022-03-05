@@ -2,24 +2,22 @@
 
 declare(strict_types = 1);
 
-namespace q\stand_with_ukraine\asset;
+namespace q\stand_with_ukraine\admin;
 
 // If this file is called directly, Bulk!
 if ( ! defined( 'ABSPATH' ) ) {
 	return;
 }
 
-/*
- * Register and Enqueue assets
+/**
+ * Update option settings
  * 
- * 
- * blue: #045bbb
- * yellow: #ffd600
+ * @since 0.0.1
 */
-class enqueue {
+class update {
 
     /**
-     * Class constructor to define object props --> empty
+     * Class constructor to define object props
      * 
      * @since   0.0.1
      * @return  void
@@ -35,8 +33,6 @@ class enqueue {
 	 * @return	__void
 	*/
 	public function hooks(){
-
-		if ( \is_admin() ){ return; }
 
 		// \add_action( 'wp_head', [ $this, 'javascript' ] );
 
