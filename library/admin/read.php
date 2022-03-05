@@ -52,7 +52,7 @@ class read {
 		return [
 			'{message}' 		=> \__( 'We stand with Ukraine' ),
 			'{button_donate}' 	=> \__( 'Donate' ),
-			'{title_donate}' 	=> \__( 'View am accredited list of organisations offering humanitation and non-military assistance to Ukraine' ),
+			'{title_donate}' 	=> \__( 'Donate to organisations offering humanitation and non-military assistance to Ukraine' ),
 			'{url_donate}'		=> 'https://www.unicef.org.uk/donate/donate-now-to-protect-children-in-ukraine/',
 			'{button_download}' => \__( 'Download' ),
 			'{title_download}' 	=> \__( 'Download the WordPress plugin to install on your own website' ),
