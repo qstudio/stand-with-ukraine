@@ -61,12 +61,12 @@ class enqueue {
 		.qswu-message p{
 			padding: 0;
 			margin: 0;
-			font-size: 2em;
+			font-size: 1.2em;
 			font-weight: 600;
-			font-family: serif;
+			font-family: inherit;
 			/* text-shadow: 1px 1px 2px black; */
 			color: #fff;
-			line-height: 1em;
+			line-height: 1.5em;
 		}
 		.qswu-actions{
 			flex: 1;
@@ -81,7 +81,7 @@ class enqueue {
 		}
 		.qswu-actions a.btn-primary {
 			color: #fff;
-			background-color: #fff;
+			background-color: transparent;
 			border-color: #006BDD;
 		}
 		.qswu-actions a.btn {
@@ -96,7 +96,7 @@ class enqueue {
 			user-select: none;
 			padding: 6px 12px;
 			padding: 0.375rem 0.75rem;
-			border: 0;
+			border: 1;
 			font-size: 16px;
 			font-size: 1rem;
 			line-height: 1.5;
