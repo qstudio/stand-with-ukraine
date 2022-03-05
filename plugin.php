@@ -24,23 +24,19 @@ final class plugin {
      */
 	private static $_instance;
 
-	// static ##
-	public static 
+	// static props ##
+	private static 
 	
 		// current tag ##
-		$_version = '0.0.1',
+		$version = '0.0.1',
 		
 		// log ##
-		$_log = null
+		$log = null,
+
+		// option key ## 
+		$option = 'q_stand_with_ukraine'
 		
 	;
-
-	/**
-	 * Props
-	 * 
-	 * @var		Array		$props
-	*/
-	public $_example = null;
 
     /**
      * Initiator
@@ -94,7 +90,7 @@ final class plugin {
      * @since   0.0.2
      * @return  Mixed
     */
-    public function get( $key = null ) {
+    public static function get( $key = null ) {
 
         // check if key set ##
         if( is_null( $key ) ){
@@ -105,7 +101,7 @@ final class plugin {
         }
         
         // return if isset ##
-        return $this->{$key} ?? false ;
+        return self::$key ?? false ;
 
     }
 
@@ -118,7 +114,7 @@ final class plugin {
      * @since   0.0.2
      * @return  Mixed
     */
-    public function set( $key = null, $value = null ) {
+    public static function set( $key = null, $value = null ) {
 
         // sanity ##
         if( 
@@ -132,7 +128,7 @@ final class plugin {
         // __log( 'prop->set: '.$key.' -> '.$value );
 
         // set new value ##
-		return $this->{$key} = $value;
+		return self::$key = $value;
 
     }
 
