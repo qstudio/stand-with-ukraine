@@ -45,6 +45,7 @@ class update {
 	*/
 	public static function option( array $array = [] ){
 
+		// @todo - sanitize array values ##
 		return \update_option( \q_stand_with_ukraine()::get( 'option' ), $array );
 
 	}
