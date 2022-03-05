@@ -31,6 +31,16 @@ final class hooks {
 		
 	}
 
+	/**
+	 * admin hooks
+	*/
+	public function admin( 
+		\q\stand_with_ukraine\admin\fetch $fetch  
+	):void {
+
+		$fetch->hooks();
+
+	}
 
 	/**
 	 * asset hooks
@@ -39,7 +49,6 @@ final class hooks {
 		\q\stand_with_ukraine\asset\enqueue $asset  
 	):void {
 
-		// load asset ##
 		$asset->hooks();
 
 	}

@@ -61,15 +61,17 @@ if( ! ( $plugin instanceof q\stand_with_ukraine\plugin ) ) {
 // set text domain on init hook ##
 \add_action( 'init', [ $plugin, 'load_plugin_textdomain' ], 1 );
 
-// build hooks factory ##
-$hooks = new \q\stand_with_ukraine\hooks( $plugin );
-
 // fire hooks - build factory objects and translations ## 
-\add_action( 'after_setup_theme', function() use( $plugin, $hooks ){
+\add_action( 'after_setup_theme', function() use( $hooks ){
 
-	// UI hooks ##
+	// admin hooks ##
+	$hooks->admin( 
+		new \q\stand_with_ukraine\admin\fetch()  
+	);
+
+	// asset hooks ##
 	$hooks->asset( 
-		new \q\stand_with_ukraine\asset\enqueue( $plugin )  
+		new \q\stand_with_ukraine\asset\enqueue()  
 	);
 
 }, 3 );

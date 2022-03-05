@@ -2,20 +2,22 @@
 
 declare(strict_types = 1);
 
-namespace q\stand_with_ukraine\asset;
+namespace q\stand_with_ukraine\admin;
 
 // If this file is called directly, Bulk!
 if ( ! defined( 'ABSPATH' ) ) {
 	return;
 }
 
-/*
-* Register and Enqueue assets
+/**
+ * Fetch Options to select in admin, such as accredited humanitarion charities to donate to.
+ * 
+ * @since 0.0.1
 */
-class enqueue {
+class fetch {
 
     /**
-     * Class constructor to define object props --> empty
+     * Class constructor to define object props
      * 
      * @since   0.0.1
      * @return  void

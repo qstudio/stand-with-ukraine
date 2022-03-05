@@ -28,7 +28,6 @@ class helper {
 		return core\log::set( $args );
 
 	}
-
 	
 	/**
 	 * Debug Calling class + method / function 
