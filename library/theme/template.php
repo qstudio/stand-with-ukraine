@@ -19,7 +19,7 @@ class template {
 	 * @todo - allow filtering and theme based override
 	 * @since 0.0.1
 	*/
-	public static function get(){
+	public static function get():?string{
 
 		return \apply_filters( 
 			'stand_with_ukraine/theme/template', 
@@ -37,6 +37,22 @@ class template {
 				</div>
 			</div>'
 		);
+
+	}
+
+	/**
+	 * Markup template from array of values
+	 * 
+	 * @todo	Filter input and output
+	 * @since 	0.0.2
+	*/
+	public static function markup( string $template = '', array $array = [] ):?string {
+
+		// escape array values ##
+		$array = array_map( 'esc_attr', $array );
+
+		// return formatted string
+		return strtr( $template, $array );
 
 	}
 

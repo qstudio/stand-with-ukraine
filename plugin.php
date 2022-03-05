@@ -174,7 +174,7 @@ final class plugin {
         // store data about the current plugin state at activation point ##
         $config = [
             'configured'            => true , 
-            'version'               => self::$_version ,
+            'version'               => self::get( 'version' ) ,
             'wp'                    => \get_bloginfo( 'version' ) ?? null ,
 			'timestamp'             => time(),
 		];

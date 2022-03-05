@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 \register_activation_hook( __FILE__, [ '\\q\\stand_with_ukraine\\plugin', 'activation_hook' ] );
 
 // plugin deactivation hook - clear stored data ##
-\register_deactivation_hook( __FILE__, [ '\\1\\stand_with_ukraine\\plugin', 'deactivation_hook' ] );
+\register_deactivation_hook( __FILE__, [ '\\q\\stand_with_ukraine\\plugin', 'deactivation_hook' ] );
 
 // required bits to get set-up ##
 require_once __DIR__ . '/library/api/function.php';

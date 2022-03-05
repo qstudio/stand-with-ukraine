@@ -38,11 +38,12 @@ class render {
 
 		if ( \is_admin() ){ return; }
 
-		\add_action( 'wp_head', [ $this, 'banner' ] );
+		\add_action( 'wp_head', [ $this, 'banner' ], 1, 0 );
 
 	}
 
 	/**
+	 * Render Banner
 	 * 
 	 * @since 0.0.1
 	*/
@@ -55,17 +56,15 @@ class render {
 		$_template = \q\stand_with_ukraine\theme\template::get();
 
 		// get default values - later these will come from options table ##
-		$_values = array_map( 'esc_attr', \q\stand_with_ukraine\admin\read::option() );
+		$_values = \q\stand_with_ukraine\admin\read::option();
 
-		// markup
-		$_string = strtr( $_template, $_values );
-
-		// echo escaped string ##
-		echo $_string;
+		// markup - array values are escaped ##
+		echo \q\stand_with_ukraine\theme\template::markup( $_template, $_values );
 
 	}
 
 	/**
+	 * Validate required data and settings
 	 * 
 	 * @since 0.0.1
 	*/
