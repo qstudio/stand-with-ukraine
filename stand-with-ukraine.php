@@ -23,6 +23,7 @@ declare(strict_types = 1);
  * Class:           q_stand_with_ukraine
  * Text Domain:     q-stand-with-ukraine
  * Domain Path:     /languages
+ * GitHub Plugin URI: qstudio/wordpress-plugin-stand-with-ukraine
 */
 
 // namespace plugin ##
