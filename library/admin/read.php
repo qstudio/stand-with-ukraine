@@ -56,8 +56,8 @@ class read {
 		return [
 			'{message}' 		=> \__( 'We stand with Ukraine' ),
 			'{button_donate}' 	=> \__( 'Donate' ),
-			'{title_donate}' 	=> \__( 'Donate to organisations offering humanitation and non-military assistance to Ukraine' ),
-			'{url_donate}'		=> 'https://www.unicef.org.uk/donate/donate-now-to-protect-children-in-ukraine/',
+			'{title_donate}' 	=> \__( 'Make a donatation to humanitation and non-military assistance to Ukraine' ),
+			'{url_donate}'		=> 'https://www.globalgiving.org/projects/ukraine-crisis-relief-fund/',
 			'{button_download}' => \__( 'Download' ),
 			'{title_download}' 	=> \__( 'Download the WordPress plugin to install on your own website' ),
 			'{url_download}'	=> 'https://github.com/qstudio/wordpress-plugin-stand-with-ukraine',
