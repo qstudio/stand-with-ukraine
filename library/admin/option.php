@@ -203,7 +203,7 @@ class option {
 									<p>
 										<textarea name="qswu_css" rows="4" cols="50" id="qswu_css" class="large-text code"><?php echo \wp_kses_post( $_array['css'] ); ?></textarea>
 									</p>
-									<p class="date-time-doc">Add Custom CSS rules</p>
+									<p class="date-time-doc"><?php \_e("Add Custom CSS rules to style the banner", "q-stand-with-ukraine"); ?></p>
 								</fieldset>
 							</td>
 						</tr>
