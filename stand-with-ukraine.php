@@ -11,7 +11,7 @@ declare(strict_types = 1);
  * @copyright       2022 Q Studio
  *
  * @wordpress-plugin
- * Plugin Name:     Stand with Ukraine Banner Plugin
+ * Plugin Name:     We Stand with Ukraine Banner
  * Plugin URI:      https://github.com/qstudio/wordpress-plugin-stand-with-ukraine
  * Description:     Stand with Ukraine Banner Plugin for WordPress.org
  * Version:         1.0.0

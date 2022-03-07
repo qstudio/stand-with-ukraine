@@ -28,7 +28,7 @@ final class plugin {
 	private static 
 	
 		// current tag ##
-		$version = '1.0.0',
+		$version = '1.0.1',
 		
 		// log ##
 		$log = null,
@@ -168,7 +168,7 @@ final class plugin {
 
         }
 
-        $plugin = isset( $_REQUEST['plugin'] ) ? $_REQUEST['plugin'] : '';
+        $plugin = isset( $_REQUEST['plugin'] ) ? \sanitize_text_field( $_REQUEST['plugin'] ) : '';
         \check_admin_referer( "activate-plugin_{$plugin}" );
 
         // store data about the current plugin state at activation point ##
@@ -201,7 +201,7 @@ final class plugin {
         
         }
 
-        $plugin = isset( $_REQUEST['plugin'] ) ? $_REQUEST['plugin'] : '';
+        $plugin = isset( $_REQUEST['plugin'] ) ? \sanitize_text_field( $_REQUEST['plugin'] ) : '';
         \check_admin_referer( "deactivate-plugin_{$plugin}" );
 
         // de-configure plugin ##

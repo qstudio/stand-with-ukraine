@@ -1,3 +1,7 @@
+### 1.0.1 ###
+
+* Second submission to wordpress.org repo
+
 ### 1.0.0 ###
 
 * First submission to wordpress.org repo

@@ -63,8 +63,6 @@ class update {
 
 			if( isset( $_POST['url_donate'] ) && $_url == $_POST['url_donate'] ) {
 
-				\__log( 'url: '.$_POST['url_donate'] );
-
 				$_array['url_donate'] = \sanitize_url( $_url );
 
 			}
@@ -78,8 +76,6 @@ class update {
 			$_array['url_donate_custom'] = \sanitize_url( $_POST["url_donate_custom"] );
 
 		}
-
-		// \__log( $_array );
 
 		// update stored values ##
 		\update_option( \q_stand_with_ukraine()::get( 'option' ), $_array );
