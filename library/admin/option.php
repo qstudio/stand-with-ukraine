@@ -193,21 +193,6 @@ class option {
 							</td>
 						</tr>
 
-						<tr>
-							<th scope="row"><?php \_e("Custom CSS", "q-stand-with-ukraine"); ?></th>
-							<td>
-								<fieldset>
-									<legend class="screen-reader-text">
-										<span><?php \_e("Custom CSS", "q-stand-with-ukraine"); ?></span>
-									</legend>
-									<p>
-										<textarea name="qswu_css" rows="8" cols="50" id="qswu_css" class="large-text code"><?php echo \esc_html( $_array['css'] ); ?></textarea>
-									</p>
-									<p class="date-time-doc">Add Custom CSS rules</p>
-								</fieldset>
-							</td>
-						</tr>
-
 					</tbody>
 				</table>
 

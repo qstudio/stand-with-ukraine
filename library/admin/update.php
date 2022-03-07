@@ -79,12 +79,12 @@ class update {
 
 		}
 
-		\__log( $_array );
+		// \__log( $_array );
 
 		// update stored values ##
 		\update_option( \q_stand_with_ukraine()::get( 'option' ), $_array );
 	 
-		// Redirect back to settings page
+		// Redirect back to settings page ##
 		// The ?page=github corresponds to the "slug"
 		// set in the fourth parameter of add_submenu_page() above.
 		$redirect_url = \get_bloginfo("url") . "/wp-admin/options-general.php?page=qswu&qswu_status=success";

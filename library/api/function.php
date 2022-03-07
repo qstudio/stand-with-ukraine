@@ -50,8 +50,6 @@ if ( ! function_exists( 'q_stand_with_ukraine' ) ) {
 
 		}
 
-		// __log( 'q\stand_with_ukraine is ok..' );
-
 		// return q\stand_with_ukraine instance ## 
 		return $instance;
 
