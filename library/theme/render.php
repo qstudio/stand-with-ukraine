@@ -49,22 +49,23 @@ class render {
 	*/
 	public function banner(){
 
-		// get stored values - returns defaults, if not edited ##
+		// get stored values - returns defaults, if not viewable ##
 		$_values = \q\stand_with_ukraine\admin\read::option();
 
-		// @todo - check if we can load all require ui options ##
-		if( ! $this->validate( $_values ) ){ return false; }
+		// check if banner is visible ##
+		if( ! $this->is_visible( $_values ) ){ return false; }
 
 		// get template markup ##
 		$_template = \q\stand_with_ukraine\theme\template::get();
 
-		// check visibillity settings ##
-		$_values['show_donate'] = $_values['show_donate'] === 1 ? 'visible' : 'hidden';
-		$_values['show_download'] = $_values['show_download'] === 1 ? 'visible' : 'hidden';
+		// define button visibillity settings ##
+		$_values['show_donate'] = isset( $_values['show_donate'] ) && $_values['show_donate'] === 1 ? 'visible' : 'hidden';
+		$_values['show_download'] = isset( $_values['show_download'] ) && $_values['show_download'] === 1 ? 'visible' : 'hidden';
 
 		// markup - array values are escaped ##
-		// @todo - use wp_kses ##
-		echo \q\stand_with_ukraine\theme\template::markup( $_template, $_values );
+		echo \wp_kses_post( 
+			\q\stand_with_ukraine\theme\template::markup( $_template, $_values ),
+		);
 
 	}
 
@@ -74,9 +75,9 @@ class render {
 	 * @param	array
 	 * @since 	0.0.1
 	*/
-	public function validate( $array ):bool{
+	public function is_visible( $array ):bool{
 
-		return $array['show_banner'] === 1 ? true : false ;
+		return isset( $array['show_banner'] ) && $array['show_banner'] === 1 ? true : false ;
 
 	}
 

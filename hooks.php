@@ -31,19 +31,13 @@ final class hooks {
 	 * admin hooks
 	*/
 	public function admin( 
-		\q\stand_with_ukraine\admin\api $api,
-		\q\stand_with_ukraine\admin\create $create,
 		\q\stand_with_ukraine\admin\read $read,
 		\q\stand_with_ukraine\admin\update $update,
-		\q\stand_with_ukraine\admin\delete $delete,
 		\q\stand_with_ukraine\admin\option $option 
 	):void {
 
-		$api->hooks();
-		$create->hooks();
 		$read->hooks();
 		$update->hooks();
-		$delete->hooks();
 
 		if( \is_admin() ){
 

@@ -16,38 +16,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 */
 class api {
 
-    /**
-     * Class constructor to define object props
-     * 
-     * @since   0.0.1
-     * @return  void
-    */
-    function __construct() {
-
-	}
-	
 	/**
-	 * WP Hooks
+	 * Get download URL from API source
 	 * 
-	 * @since  	0.0.1
-	 * @return	__void
+	 * @return 	mixed
+	 * @since	0.0.1
 	*/
-	public function hooks(){
-
-		// \add_action( 'wp_head', [ $this, 'javascript' ] );
-
-	}
+	public static function get_download_link():?string{}
 
 	/**
+	 * Get list of download links from API source
 	 * 
-	 * @since 0.0.1
+	 * @return	mixed
+	 * @since 	0.0.1
 	*/
-	public function get_source_links(){}
-
-	/**
-	 * 
-	 * @since 0.0.1
-	*/
-	public function get_donation_links(){}
+	public static function get_donation_links():?array{}
 
 }

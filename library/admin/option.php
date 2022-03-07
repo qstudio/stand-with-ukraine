@@ -100,7 +100,7 @@ class option {
 							</td>
 						</tr>
 
-						<tr class="qswu_message_tr hidden">
+						<tr class="qswu_message_tr">
 							<th scope="row"><label for="qswu_message"><?php \_e("Message Text:", "q-stand-with-ukraine"); ?></label></th>
 							<td>
 								<input name="qswu_message" type="text" id="qswu_message" value="<?php echo \esc_html( $_array['message'] ); ?>" class="regular-text" maxlength="100" />
@@ -193,6 +193,21 @@ class option {
 							</td>
 						</tr>
 
+						<tr>
+							<th scope="row"><?php \_e("Custom CSS", "q-stand-with-ukraine"); ?></th>
+							<td>
+								<fieldset>
+									<legend class="screen-reader-text">
+										<span><?php \_e("Custom CSS", "q-stand-with-ukraine"); ?></span>
+									</legend>
+									<p>
+										<textarea name="qswu_css" rows="4" cols="50" id="qswu_css" class="large-text code"><?php echo \wp_kses_post( $_array['css'] ); ?></textarea>
+									</p>
+									<p class="date-time-doc">Add Custom CSS rules</p>
+								</fieldset>
+							</td>
+						</tr>
+
 					</tbody>
 				</table>
 
@@ -240,7 +255,7 @@ class option {
 		if ( isset($_GET['qswu_status']) && $_GET['qswu_status']=='success') {
 
 	?>
-   	<div id="message" class="updated notice is-dismissible">
+   	<div id="message" class="updated notice notice-success is-dismissible">
 		<p><?php \_e("Settings updated", "q-stand-with-ukraine"); ?></p>
       	<button type="button" class="notice-dismiss">
 			<span class="screen-reader-text"><?php \_e("Dismiss this notice.", "q-stand-with-ukraine"); ?></span>

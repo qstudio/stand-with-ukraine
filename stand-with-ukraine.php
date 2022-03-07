@@ -14,7 +14,7 @@ declare(strict_types = 1);
  * Plugin Name:     Stand with Ukraine Banner Plugin
  * Plugin URI:      https://github.com/qstudio/wordpress-plugin-stand-with-ukraine
  * Description:     Stand with Ukraine Banner Plugin for WordPress.org
- * Version:         0.0.2
+ * Version:         1.0.0
  * Author:          Q Studio
  * Author URI:      https://qstudio.us
  * License:         GPL-2.0+
@@ -52,7 +52,7 @@ $plugin = plugin::get_instance();
 // validate instance ##
 if( ! ( $plugin instanceof \q\stand_with_ukraine\plugin ) ) {
 
-	error_log( 'Error in stand_with_ukraine plugin instance' );
+	error_log( 'Error in q\stand_with_ukraine plugin instance' );
 
 	// nothing else to do here ##
 	return;
@@ -69,11 +69,8 @@ $hooks = new \q\stand_with_ukraine\hooks();
 
 	// admin hooks ##
 	$hooks->admin( 
-		new \q\stand_with_ukraine\admin\api,
-		new \q\stand_with_ukraine\admin\create,
 		new \q\stand_with_ukraine\admin\read,
 		new \q\stand_with_ukraine\admin\update,
-		new \q\stand_with_ukraine\admin\delete,
 		new \q\stand_with_ukraine\admin\option,
 	);
 

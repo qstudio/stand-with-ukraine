@@ -77,7 +77,7 @@ class template {
 
 		}
 
-		\__log( $_curvy_array );
+		// \__log( $_curvy_array );
 
 		return $_curvy_array;
 	

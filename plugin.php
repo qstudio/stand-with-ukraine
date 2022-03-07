@@ -28,7 +28,7 @@ final class plugin {
 	private static 
 	
 		// current tag ##
-		$version = '0.0.2',
+		$version = '1.0.0',
 		
 		// log ##
 		$log = null,

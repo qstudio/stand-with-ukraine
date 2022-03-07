@@ -1,3 +1,7 @@
+### 1.0.0 ###
+
+* First submission to wordpress.org repo
+
 ### 0.0.2 ###
 
 * New: Add editable message

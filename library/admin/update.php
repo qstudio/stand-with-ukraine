@@ -56,7 +56,7 @@ class update {
 		$_array['show_donate'] = isset( $_POST["qswu_show_donate"] ) ? (int) $_POST["qswu_show_donate"] : $_option['show_donate'];
 		$_array['show_download'] = isset( $_POST["qswu_show_download"] ) ? (int) $_POST["qswu_show_download"] : $_option['show_download'];
 		$_array['message'] = isset( $_POST["qswu_message"] ) ? \sanitize_text_field( $_POST["qswu_message"] ) : $_option['message'];
-		$_array['css'] = isset( $_POST["qswu_css"] ) ? \sanitize_text_field( $_POST["qswu_css"] ) : $_option['css'];
+		$_array['css'] = isset( $_POST["qswu_css"] ) ? \wp_kses_post( $_POST["qswu_css"] ) : $_option['css'];
 	 
 		// get all known donation urls ##
 		foreach( \q\stand_with_ukraine\admin\read::get_url_donate() as $_label => $_url ){
