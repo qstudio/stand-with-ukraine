@@ -1,3 +1,7 @@
+### 1.0.3 ###
+
+* Design, css and template improvements
+
 ### 1.0.2 ###
 
 * Custom CSS rendered in template

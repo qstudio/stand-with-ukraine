@@ -5,7 +5,8 @@ if ( !defined( 'WP_UNINSTALL_PLUGIN' ) )
     exit();
 
 $options = array (
-    'q\stand_with_ukraine'
+    'q\stand_with_ukraine',
+	'q_stand_with_ukraine'
 );
 
 // For Single site
