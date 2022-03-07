@@ -22,7 +22,7 @@ class template {
 	public static function get():?string{
 
 		return \apply_filters( 
-			'stand_with_ukraine/theme/template', 
+			'q\stand_with_ukraine\theme\template', 
 			'<div id="qswu-banner">
 				<div class="qswu-message qswu-flex">
 					<p>{message}</p>
