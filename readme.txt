@@ -4,7 +4,7 @@ Tags: anner, Plugin, Support, Ukraine
 Requires PHP: 7.0  
 Requires at least: 4.8  
 Tested up to: 5.9.1  
-Stable tag: 1.0.1  
+Stable tag: 1.0.2  
 License: GPLv2  
 
 Stand with Ukraine Banner Plugin for WordPress.org
@@ -28,6 +28,9 @@ Future plans:
 2. Example of front-end view 
 
 == Changelog ==
+
+= 1.0.2 =
+Render Custom CSS
 
 = 1.0.0 =
 First submission to wordpress.org

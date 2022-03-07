@@ -1,3 +1,7 @@
+### 1.0.2 ###
+
+* Custom CSS rendered in template
+
 ### 1.0.1 ###
 
 * Second submission to wordpress.org repo
