@@ -73,7 +73,8 @@ $hooks = new \q\stand_with_ukraine\hooks();
 		new \q\stand_with_ukraine\admin\create,
 		new \q\stand_with_ukraine\admin\read,
 		new \q\stand_with_ukraine\admin\update,
-		new \q\stand_with_ukraine\admin\delete    
+		new \q\stand_with_ukraine\admin\delete,
+		new \q\stand_with_ukraine\admin\option,
 	);
 
 	// asset hooks ##

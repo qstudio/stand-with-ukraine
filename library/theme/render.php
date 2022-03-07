@@ -49,16 +49,21 @@ class render {
 	*/
 	public function banner(){
 
+		// get stored values - returns defaults, if not edited ##
+		$_values = \q\stand_with_ukraine\admin\read::option();
+
 		// @todo - check if we can load all require ui options ##
-		if( ! $this->validate() ){ return false; }
+		if( ! $this->validate( $_values ) ){ return false; }
 
 		// get template markup ##
 		$_template = \q\stand_with_ukraine\theme\template::get();
 
-		// get default values - later these will come from options table ##
-		$_values = \q\stand_with_ukraine\admin\read::option();
+		// check visibillity settings ##
+		$_values['show_donate'] = $_values['show_donate'] === 1 ? 'visible' : 'hidden';
+		$_values['show_download'] = $_values['show_download'] === 1 ? 'visible' : 'hidden';
 
 		// markup - array values are escaped ##
+		// @todo - use wp_kses ##
 		echo \q\stand_with_ukraine\theme\template::markup( $_template, $_values );
 
 	}
@@ -66,11 +71,12 @@ class render {
 	/**
 	 * Validate required data and settings
 	 * 
-	 * @since 0.0.1
+	 * @param	array
+	 * @since 	0.0.1
 	*/
-	public function validate():bool{
+	public function validate( $array ):bool{
 
-		return true;
+		return $array['show_banner'] === 1 ? true : false ;
 
 	}
 

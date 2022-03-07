@@ -14,18 +14,18 @@ class helper {
      */
     public static function log( $args = null ){
 		
-		// shift callback level, as we added another level.. ##
-		\add_filter( 
-			'q/core/log/traceback/function', function () {
-			return 4;
-		});
-		\add_filter( 
-			'q/core/log/traceback/file', function () {
-			return 3;
-		});
-		
-		// pass to core\log::set();
-		return core\log::set( $args );
+		if ( true === \WP_DEBUG ) {
+
+			if ( 
+				is_array( $args ) 
+				|| is_object( $args ) 
+			) {
+				error_log( print_r( $args, true ) );
+            } else {
+				error_log( $args );
+            }
+
+		}
 
 	}
 	
@@ -44,8 +44,6 @@ class helper {
 
 		if (
 			! isset( $backtrace[$level] )
-			// || ! isset( $backtrace[$level]['class'] )
-			// || ! isset( $backtrace[$level]['function'] )
 		) {
 
 			return false;
@@ -59,8 +57,6 @@ class helper {
 		if ( 
 			isset( $args['return'] ) 
 			&& 'class_function' == $args['return'] 
-			// && isset( $caller['class'] )
-			// && isset( $caller['function'] )
 		) {
 
 			return sprintf(
@@ -75,8 +71,6 @@ class helper {
 		if ( 
 			isset( $args['return'] ) 
 			&& 'config' == $args['return'] 
-			// && isset( $caller['class'] )
-			// && isset( $caller['function'] )
 		) {
 
 			return sprintf(

@@ -2,6 +2,9 @@
 
 // Global functions added by q\stand_with_ukraine, site outside of the namespace and are pluggable
 
+// import ##
+use q\stand_with_ukraine\core\helper as h;
+
 /** 
  * API 
  *
@@ -51,6 +54,16 @@ if ( ! function_exists( 'q_stand_with_ukraine' ) ) {
 
 		// return q\stand_with_ukraine instance ## 
 		return $instance;
+
+	}
+
+}
+
+if( ! function_exists( '__log' ) ){
+
+	function __log( $args ){
+		
+		h::log( $args );
 
 	}
 

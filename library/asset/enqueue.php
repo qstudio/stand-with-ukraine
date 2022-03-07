@@ -108,6 +108,9 @@ class enqueue {
 			text-decoration: none;
 			background-color: #fff;
 		}
+		.qswu-actions a.btn.hidden{
+			display:none;
+		}
 	</style>
 	<?php
 

@@ -4,9 +4,6 @@ declare(strict_types = 1);
 
 namespace q\stand_with_ukraine\admin;
 
-// import ##
-use q\stand_with_ukraine\core\helper as h;
-
 // If this file is called directly, Bulk!
 if ( ! defined( 'ABSPATH' ) ) {
 	return;
@@ -18,6 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 0.0.1
 */
 class read {
+
+	private static $_defaults = [];
+	private static $_url_donate = [];
 
     /**
      * Class constructor to define object props
@@ -50,18 +50,78 @@ class read {
 	*/
 	public static function option(){
 
-		$_option = \get_option( \q_stand_with_ukraine()::get( 'option' ) );
-		h::log( $_option );
+		// get defaults ##
+		$_defaults = self::get_defaults();
 
-		return [
-			'{message}' 		=> \__( 'We stand with Ukraine' ),
-			'{button_donate}' 	=> \__( 'Donate' ),
-			'{title_donate}' 	=> \__( 'Make a donatation to humanitation and non-military assistance to Ukraine' ),
-			'{url_donate}'		=> 'https://www.globalgiving.org/projects/ukraine-crisis-relief-fund/',
-			'{button_download}' => \__( 'Download' ),
-			'{title_download}' 	=> \__( 'Download the WordPress plugin to install on your own website' ),
-			'{url_download}'	=> 'https://github.com/qstudio/wordpress-plugin-stand-with-ukraine',
-		];
+		// get stored options -- default to empty array ##
+		$_option = \get_option( \q_stand_with_ukraine()::get( 'option' ) ) ?? [] ;
+
+		// return merged array ##
+		return \wp_parse_args( $_option, $_defaults );
+
+	}
+
+	/**
+	 * 
+	 * @since 0.0.2
+	*/
+	public static function get_defaults():array{
+
+		// cache ##
+		if( 
+			! empty( self::$_defaults ) && 
+			is_array( self::$_defaults ) 
+		){ 
+				
+			return self::$_defaults; 
+			
+		}
+
+		// filter once ##
+		$_defaults = \apply_filters( 'q\stand_with_ukraine\admin\read\defaults', [
+			'show_banner' 		=> 1,
+			'show_donate' 		=> 1,
+			'show_download' 	=> 1,
+			'css'				=> '',
+			'message' 			=> \__( 'We stand with Ukraine' ),
+			'button_donate' 	=> \__( 'Donate' ),
+			'title_donate' 		=> \__( 'Make a donation to humanitation and non-military assistance to Ukraine' ),
+			'url_donate'		=> '',
+			'url_donate_custom'	=> '',
+			'button_download' 	=> \__( 'Download' ),
+			'title_download' 	=> \__( 'Download the WordPress plugin to install on your own website' ),
+			'url_download'		=> 'https://github.com/qstudio/wordpress-plugin-stand-with-ukraine',
+		]);
+
+		// return and set prop value ##
+		return self::$_defaults = $_defaults;
+
+	}
+
+	/**
+	 * 
+	 * @since 0.0.2
+	*/
+	public static function get_url_donate():array{
+
+		// cache ##
+		if( 
+			! empty( self::$_url_donate ) && 
+			is_array( self::$_url_donate ) 
+		){ 
+				
+			return self::$_url_donate; 
+			
+		}
+
+		// filter once ##
+		$_url_donate = \apply_filters( 'q\stand_with_ukraine\admin\read\url_donate', [
+			'Global Giving'		=> 'https://www.globalgiving.org/projects/',
+			'UNICEF'			=> 'https://www.unicef.org/emergencies/conflict-ukraine-pose-immediate-threat-children',
+		]);
+
+		// return and set prop value ##
+		return self::$_url_donate = $_url_donate;
 
 	}
 

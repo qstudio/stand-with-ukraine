@@ -35,7 +35,8 @@ final class hooks {
 		\q\stand_with_ukraine\admin\create $create,
 		\q\stand_with_ukraine\admin\read $read,
 		\q\stand_with_ukraine\admin\update $update,
-		\q\stand_with_ukraine\admin\delete $delete   
+		\q\stand_with_ukraine\admin\delete $delete,
+		\q\stand_with_ukraine\admin\option $option 
 	):void {
 
 		$api->hooks();
@@ -43,6 +44,12 @@ final class hooks {
 		$read->hooks();
 		$update->hooks();
 		$delete->hooks();
+
+		if( \is_admin() ){
+
+			$option->hooks();
+
+		}
 
 	}
 
