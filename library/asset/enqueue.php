@@ -45,16 +45,6 @@ class enqueue {
 	*/
 	public function style(){
 
-		// get stored values - returns defaults, if not viewable ##
-		$_values = \q\stand_with_ukraine\admin\read::option();
-
-		$_custom_css = false;
-		if( isset( $_values['css'] ) && ! empty( $_values['css'] ) ){
-
-			$_custom_css = strip_tags( $_values['css'] );
-
-		}
-
 	?>
 	<style>
 		#qswu-banner{
@@ -121,16 +111,6 @@ class enqueue {
 		.qswu-actions a.btn.hidden{
 			display:none;
 		}
-		<?php
-
-		// add custom css late, to override default ##
-		if( $_custom_css ){
-
-			echo \wp_kses_post( $_custom_css );
-
-		}
-
-		?>
 	</style>
 	<?php
 

@@ -82,7 +82,6 @@ class read {
 			'show_banner' 		=> 1,
 			'show_donate' 		=> 1,
 			'show_download' 	=> 1,
-			'css'				=> '',
 			'message' 			=> \__( 'Stand with Ukraine' ),
 			'button_donate' 	=> \__( 'Donate' ),
 			'title_donate' 		=> \__( 'Make a donation to humanitation and non-military assistance for Ukraine' ),

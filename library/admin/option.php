@@ -193,21 +193,6 @@ class option {
 							</td>
 						</tr>
 
-						<tr>
-							<th scope="row"><?php \_e("Custom CSS", "q-stand-with-ukraine"); ?></th>
-							<td>
-								<fieldset>
-									<legend class="screen-reader-text">
-										<span><?php \_e("Custom CSS", "q-stand-with-ukraine"); ?></span>
-									</legend>
-									<p>
-										<textarea name="qswu_css" rows="4" cols="50" id="qswu_css" class="large-text code"><?php echo \wp_kses_post( $_array['css'] ); ?></textarea>
-									</p>
-									<p class="date-time-doc"><?php \_e("Add Custom CSS rules to style the banner", "q-stand-with-ukraine"); ?></p>
-								</fieldset>
-							</td>
-						</tr>
-
 					</tbody>
 				</table>
 

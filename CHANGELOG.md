@@ -1,6 +1,7 @@
 ### 1.0.3 ###
 
-* Design, css and template improvements
+* Removed custom CSS editor, as per WordPress requirements...
+* Small design improvements to buttons
 
 ### 1.0.2 ###
 
