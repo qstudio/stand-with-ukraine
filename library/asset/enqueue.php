@@ -55,7 +55,7 @@ class enqueue {
 		}
 		.qswu-message{
 			color: #fff;
-			flex: 0 0 65%;
+			flex: 0 0 50%;
 			padding: 10px 20px;
 		}
 		.qswu-message p{
@@ -64,7 +64,6 @@ class enqueue {
 			font-size: 1.2em;
 			font-weight: 600;
 			font-family: inherit;
-			/* text-shadow: 1px 1px 2px black; */
 			color: #fff;
 			line-height: 1.5em;
 		}
@@ -76,40 +75,26 @@ class enqueue {
 		.qswu-actions a {
 			margin: 2px 3px;
 		}
-		.qswu-actions a.btn:not(:disabled):not(.disabled) {
-			cursor: pointer;
-		}
-		.qswu-actions a.btn-primary {
-			color: #fff;
-			background-color: transparent;
-			border-color: #006BDD;
-		}
 		.qswu-actions a.btn {
 			display: inline-block;
-			font-weight: 400;
-			color: #000;
-			text-align: center;
-			vertical-align: middle;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-			padding: 6px 12px;
-			padding: 0.375rem 0.75rem;
-			border: 1;
-			font-size: 16px;
-			font-size: 1rem;
-			line-height: 1.5;
-			border-radius: 0.25rem;
-			transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-		}
-		.qswu-actions a {
-			color: #000;
+			border: 2px solid black;
 			text-decoration: none;
-			background-color: #fff;
+			background-color: transparent;
+			color: black;
+			padding: 4px 7px;
+			font-size: 12px;
+			border-color: #000;
+  			color: black;
+		}
+		.qswu-actions a.btn:hover {
+			background: #045bbb;
+			color: #fff;
 		}
 		.qswu-actions a.btn.hidden{
 			display:none;
+		}
+		.qswu-actions a.btn:not(:disabled):not(.disabled) {
+			cursor: pointer;
 		}
 	</style>
 	<?php
