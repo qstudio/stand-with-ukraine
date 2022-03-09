@@ -1,3 +1,7 @@
+### 1.0.5 ###
+
+* asset location fix
+
 ### 1.0.4 ###
 
 * First release on wordpress.org
