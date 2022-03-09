@@ -1,3 +1,8 @@
+### 1.0.4 ###
+
+* First release on wordpress.org
+* Added banner, screenshots and icon assets
+
 ### 1.0.3 ###
 
 * Removed custom CSS editor, as per WordPress requirements...
