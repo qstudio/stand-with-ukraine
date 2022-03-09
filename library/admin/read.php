@@ -117,6 +117,7 @@ class read {
 		$_url_donate = \apply_filters( 'q\stand_with_ukraine\admin\read\url_donate', [
 			'Global Giving'		=> 'https://www.globalgiving.org/projects/',
 			'UNICEF'			=> 'https://www.unicef.org/emergencies/conflict-ukraine-pose-immediate-threat-children',
+			'PAH'				=> 'https://www.pah.org.pl/'
 		]);
 
 		// return and set prop value ##
