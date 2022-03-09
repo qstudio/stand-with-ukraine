@@ -89,7 +89,7 @@ class read {
 			'url_donate_custom'	=> '',
 			'button_download' 	=> \__( 'Download' ),
 			'title_download' 	=> \__( 'Download the WordPress plugin to install on your own website' ),
-			'url_download'		=> 'https://github.com/qstudio/wordpress-plugin-stand-with-ukraine',
+			'url_download'		=> 'https://wordpress.org/plugins/we-stand-with-ukraine-banner/',
 		]);
 
 		// return and set prop value ##

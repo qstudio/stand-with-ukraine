@@ -1,3 +1,7 @@
+### 1.0.8 ###
+
+* Updated download link to wordpress.org
+
 ### 1.0.7 ###
 
 * screenshot fix
