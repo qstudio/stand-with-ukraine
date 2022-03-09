@@ -1,3 +1,7 @@
+### 1.0.6 ###
+
+* screenshot fix
+
 ### 1.0.5 ###
 
 * asset location fix
